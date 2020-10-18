@@ -1,1 +1,1 @@
-UPDATE test set test = 1
+UPDATE test set test = 2
