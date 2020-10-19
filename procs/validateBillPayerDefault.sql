@@ -51,7 +51,7 @@ create procedure validateBillPayerDefault
     
     declare @msg table (msg varchar(max))
 
-    -- Custom account number validation
+    -- Custom account number validations
     if @accNumberProc like 'validate%' begin
         insert @msg exec @accNumberProc @accnumber
         select 'error', msg from @msg where len(msg) > 0
