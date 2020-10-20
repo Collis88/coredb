@@ -1,4 +1,4 @@
---
+﻿--
 -- upgradeDB
 --
 -- (C)opyright Connect Technology Group 20xx
@@ -717,13 +717,13 @@ create table upgTypeData(type varchar(50),item varchar(200),id int)
 
 
 -- Set version number
-exec executesql N'update programsettings set version=8340'
-declare @dbver varchar(10) = '8.3.4'
-declare @dbdesc varchar(200) = '8.3.4 14th Sep 2020'
+exec executesql N'update programsettings set version=1107'
+declare @dbver varchar(10) = '1.1.0'
+declare @dbdesc varchar(200) = '1.1.0 20th Oct 2020'
 
 
 if not exists (select 1 from Lookup where item = 'DBVERSION') insert Lookup(item,value,description,ordinal) values ('DBVERSION','','',0)
-update Lookup set value = @dbver,description = @dbdesc where item = 'DBVERSION'
+update Lookup set value = @dbver,description = @dbdesc where item = '1.1.0 20th Oct 2020'
 
 END TRY
 
@@ -743,4 +743,4 @@ exec upgradeDB
 
 if not exists (select * from information_schema.tables where table_name = 'programSettings') RAISERROR ('Error upgrading DB!', 20, 1) with log
 
-if not exists (select 1 from programSettings where version=8340) RAISERROR ('Error upgrading DB!', 20, 1) with log
+if not exists (select 1 from programSettings where version=1107) RAISERROR ('Error upgrading DB!', 20, 1) with log
