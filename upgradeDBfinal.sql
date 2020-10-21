@@ -52,10 +52,10 @@ join typeData t on t.item = u.item and t.type = u.type and t.id <> u.id and t.ac
 '
 go
 
-declare @s varchar(max) = 'UPGRADE SUCCESSFUL (DB version: 8340)' -- SET THIS ON BRANCH
+declare @s varchar(max) = 'UPGRADE SUCCESSFUL (DB version: 1107)' -- SET THIS ON BRANCH
 exec logUpdate @s
 
-set @s = 'UPGRADE SUCCESSFUL (DB sub version: 8.3.4)' -- SET THIS ON BRANCH TAG TO NEW VERSION --
+set @s = 'UPGRADE SUCCESSFUL (DB sub version: 1.1.0)' -- SET THIS ON BRANCH TAG TO NEW VERSION --
 exec logUpdate @s
 
 
