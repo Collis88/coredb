@@ -1,5 +1,5 @@
 --
--- upgradeDB
+-- upgradeDB--
 --
 -- (C)opyright Connect Technology Group 20xx
 --
