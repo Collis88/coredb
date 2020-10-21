@@ -1,8 +1,4 @@
-﻿--
--- upgradeDB
---
--- (C)opyright Connect Technology Group 20xx
---
+
 -- Description:
 --
 -- Database schema changes, patches  to be performed
