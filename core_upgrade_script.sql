@@ -984,3 +984,6 @@ exec logUpdate @s
 select 'UPGRADE SUCCESSFUL',* from programsettings
 
 go
+
+--test
+
