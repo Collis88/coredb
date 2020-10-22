@@ -177,11 +177,7 @@ create procedure validateBillPayerDefault
  go
 
 
---
--- upgradeDB
---
--- (C)opyright Connect Technology Group 20xx
---
+
 -- Description:
 --
 -- Database schema changes, patches  to be performed
@@ -898,7 +894,7 @@ create table upgTypeData(type varchar(50),item varchar(200),id int)
 -- Set version number
 exec executesql N'update programsettings set version=1107'
 declare @dbver varchar(10) = '1.1.0'
-declare @dbdesc varchar(200) = '1.1.0 20th Oct 2020'
+declare @dbdesc varchar(200) = '1.1.0 22nd Oct 2020'
 
 
 if not exists (select 1 from Lookup where item = 'DBVERSION') insert Lookup(item,value,description,ordinal) values ('DBVERSION','','',0)
